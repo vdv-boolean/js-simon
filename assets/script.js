@@ -13,3 +13,16 @@ const distanceBetweenDates = finishDate - currentTime;
 
 console.log(distanceBetweenDates);
 
+// Equivalence calc
+const second = 1000;
+const minute = second * 60;
+const hour = minute * 60;
+const day = hour * 24;
+
+// Get distance in dd/hh/mm/ss format
+const days = Math.floor(distanceBetweenDates / day);
+const hours = Math.floor(distanceBetweenDates % day / hour);
+const minutes = Math.floor(distanceBetweenDates % hour / minute);
+const seconds = Math.floor(distanceBetweenDates % minute / second);
+
+console.log(days, hours, minutes, seconds);

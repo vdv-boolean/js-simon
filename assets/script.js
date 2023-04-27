@@ -18,10 +18,15 @@ function getDistance() {
     const day = hour * 24;
 
     // Get distance in dd/hh/mm/ss format
-    const days = Math.floor(distanceBetweenDates / day);
-    const hours = Math.floor(distanceBetweenDates % day / hour);
-    const minutes = Math.floor(distanceBetweenDates % hour / minute);
-    const seconds = Math.floor(distanceBetweenDates % minute / second);
+    let days = Math.floor(distanceBetweenDates / day);
+    let hours = Math.floor(distanceBetweenDates % day / hour);
+    let minutes = Math.floor(distanceBetweenDates % hour / minute);
+    let seconds = Math.floor(distanceBetweenDates % minute / second);
+
+    days = (days < 10) ? "0" + days : days;
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
 
     // Print to DOM
     document.querySelector("h1").innerHTML = days + ":" + hours + ":"

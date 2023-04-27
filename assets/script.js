@@ -29,7 +29,7 @@ function getDistance() {
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
     // Print to DOM
-    document.querySelector("h1").innerHTML = days + ":" + hours + ":"
+    document.querySelector("h2").innerHTML = days + ":" + hours + ":"
     + minutes + ":" + seconds;
 };
 
